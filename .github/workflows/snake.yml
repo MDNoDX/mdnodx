@@ -5,7 +5,6 @@ on:
     - cron: "0 0 * * *"
   workflow_dispatch:
 
-# Muhim: workflow'ga write permission berish
 permissions:
   contents: write
 
@@ -37,3 +36,11 @@ jobs:
           force_orphan: true
           allow_empty_commit: true
           commit_message: "Update snake animation [skip ci]"
+
+  jobs:
+  generate:
+    runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+    steps:
+      # ... qolgan qismi o'zgarmaydi
